@@ -1,10 +1,19 @@
-.chat_side_upper
-  .login_user
-    ログインユーザー
-
-.chat_side_lower
-  .chat_group_name
-    グループ名
-  .chat_group_comments
-    コメント
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name junichi
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          %a{:href => "#"}
+            %i.fa.fa-edit
+              
+        %li.side-header__box__menu__edit-user
+          %a{:href => "#"}
+            %i.fa.fa-cog
+              
+  .groups
+    %a{:href => "#"}
+      .group
+        %p.group__group-name test
+        %p.group__latest-message まだメッセージはありません
 
