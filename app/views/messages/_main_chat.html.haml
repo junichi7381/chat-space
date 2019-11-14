@@ -1,26 +1,30 @@
-.chat-main
-  .main-header
-    .main-header__left-box
-      %h2.main-header__left-box__current-group{"data-group_id" => "#"} techexpert
-      %ul.main-header__left-box__member-list
-        Member:
-        %li.main-header__left-box__member-list__member junichi
-    =link_to '#' do
-      .m-header__edit-btn Edit
-  .messages
-    .message{"data-message_id" => "#"}
-      .comment__upper-info
-        %p.comment__upper-info__talker suwa
-        %p.comment__upper-info__date 2019/11/13
-      %p.comment__text おはようございます！
-  .form
-    %form#new_message.new_message{"accept-charset" => "UTF-8", action: "#", enctype: "multipart/form-data", method: "post"}
-      %input{name: "UTF-8", type: "hidden", value: "#"}/
-      %input{name: "#", type: "hidden", value: "#"}/
-      .input-box
-        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-        %label.input-box__image{for: "message_image"}
-          %i.fa.fa-image
-            
-          %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
-      %input.submit-btn{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}/
+.wrapper
+
+  = render 'messages/side_bar'
+
+    .chat-main
+      .main-header
+        .main-header__left-box
+          %h2.main-header__left-box__current-group{"data-group_id" => "#"} techexpert
+          %ul.main-header__left-box__member-list
+            Member:
+            %li.main-header__left-box__member-list__member junichi
+        =link_to '#' do
+          .m-header__edit-btn Edit
+      .messages
+        .message{"data-message_id" => "#"}
+          .comment__upper-info
+            %p.comment__upper-info__talker suwa
+            %p.comment__upper-info__date 2019/11/13
+          %p.comment__text おはようございます！
+      .form
+        %form#new_message.new_message{"accept-charset" => "UTF-8", action: "#", enctype: "multipart/form-data", method: "post"}
+          %input{name: "UTF-8", type: "hidden", value: "#"}/
+          %input{name: "#", type: "hidden", value: "#"}/
+          .input-box
+            %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+            %label.input-box__image{for: "message_image"}
+              %i.fa.fa-image
+                
+              %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
+          %input.submit-btn{"data-disable-with" => "Send", name: "commit", type: "submit", value: "Send"}/
