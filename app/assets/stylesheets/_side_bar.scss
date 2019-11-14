@@ -15,28 +15,37 @@
       justify-content: space-between;
       width: 100%;
       font-weight: bold;
+    
+      &__menu {
+          display: flex;
+      }
+
+      .fa {
+        margin-left: 0.3rem;
+
+      }
     }
 
-    &__box__menu {
-        display: flex;
-    }
   }    
 
   .groups {
     height: calc(100vh - 100px);
     background-color : #2f3e51;
     padding: 0 20px;
-    
+
+    .group {
+      
       &__group-name {
         font-size: 15px;
-        margin-bottom: 5px;
-      
+        padding-top: 10px;  
+  
       }
 
       &__latest-message {
           font-size: 11px;
-        
+          padding-top: 10px;   
       }
-    
+    }
+
   }
 }
