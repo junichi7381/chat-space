@@ -29,7 +29,7 @@
       
       }
 
-        .main-header__edit-btn {
+        .m-header__edit-btn {
           color: #38aef0;
           height: 40px;
           line-height: 40px;
@@ -51,7 +51,7 @@
 
       .message {
      
-        .message__upper-info {
+        .comment__upper-info {
           display: flex;
 
           &__talker {
@@ -67,7 +67,7 @@
           }
         } 
       
-        .message__text {
+        .comment__text {
           
           color: #434a54;
           font-size: 14px;

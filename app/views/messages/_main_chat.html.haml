@@ -6,13 +6,13 @@
         Member:
         %li.main-header__left-box__member-list__member junichi
     =link_to '#' do
-      .main-header__edit-btn Edit
+      .m-header__edit-btn Edit
   .messages
     .message{"data-message_id" => "#"}
-      .message__upper-info
-        %p.message__upper-info__talker suwa
-        %p.message__upper-info__date 2019/11/13
-      %p.message__text おはようございます！
+      .comment__upper-info
+        %p.comment__upper-info__talker suwa
+        %p.comment__upper-info__date 2019/11/13
+      %p.comment__text おはようございます！
   .form
     %form#new_message.new_message{"accept-charset" => "UTF-8", action: "#", enctype: "multipart/form-data", method: "post"}
       %input{name: "UTF-8", type: "hidden", value: "#"}/
