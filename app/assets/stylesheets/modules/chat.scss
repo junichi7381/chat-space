@@ -1,7 +1,9 @@
 .chat{
   width:calc(100% - 300px);
+  box-sizing:border-box;
+
   .header{
-    box-sizing:border-box;
+    
     height:100px;
     padding:0 40px;
     .left-header{
@@ -75,9 +77,9 @@
   .form{
     background-color: #DDDDDD;
     box-sizing: border-box;
+    
     height: 90px;
     padding: 20px 50px 20px 40px;
-    box-sizing: border-box;
     
     &__message{
       border: none;
@@ -86,7 +88,9 @@
       height: 50px;
       padding: 0 10px;
       width: calc(100% - 150px);
+      
     }
+    
     &__mask{
       background-color: $white;
       float: left;
