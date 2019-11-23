@@ -40,40 +40,44 @@
     }
   }
 
-  .chat-group-form__field {
+  .chat-group-form {
     margin-top: 30px;
+    
     &:after {
       content: "";
       clear: both;
       display: block;
+    
     }
 
-      &--left {
-        float: left;
-        width: 30%;
-        padding-right: 20px;
-        padding-left: 20px;
-        box-sizing: border-box;
-      }
+    &__field--left {
+      float: left;
+      
+      padding-right: 20px;
+      
+      text-align: right;
+      font-weight: bold;
+    }
 
-      &--right {
+    &--right {
+      float: right;
+      width: 70%;
+    
+      &--search {
         float: right;
         width: 70%;
-      
-        &--search {
-          float: right;
-          width: 70%;
-        }
+      }
     }
       &__label {
         display: block;
         line-height: 50px;
         font-weight: bold;
         text-align: right;
+        float: right;
       }
 
       &__input {
-        float: left;
+        
         width: 100%;
         line-height: 30px;
         padding: 10px 15px;
@@ -97,7 +101,7 @@
 
     &__btn {
       float: right;
-      display: inline-block;
+      
       cursor: pointer;
       &.chat-group-user__btn--add {
         color: #38aef0;
