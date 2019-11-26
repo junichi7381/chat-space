@@ -12,16 +12,14 @@
       %a.right-header__button
         = link_to edit_group_path(@group.id) do
           Edit
-
   .messages
+    / このjsmessageっていらないかも
     = render @messages
-
   .form
-  = form_for [@group, @message] do |f|
-    = f.text_field :content, class: 'form__message', id: 'new_message', placeholder: 'type a message'
-    
-    .form__mask
-      = f.label :image, class: 'form__mask__image' do
-        = icon('fas', 'image', class: 'icon')
-        = f.file_field :image, class: 'hidden'
-    = f.submit 'Send', class: 'form__submit'
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', id: 'new_message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
