@@ -2,7 +2,8 @@ $(function() {
   // メッセージ表示のHTML生成
   function buildHTML(message){
     var imagehtml = message.image == null ? "" : `<img src="${message.image}" class="lower-message__image">`
-    var html = `<div class=message>
+
+    var html = `<div class=“message” data-message-id=${message.id}>
                     <div class="upper-message">
                       <div class="upper-message__user-name">
                       ${message.user_name}
@@ -38,7 +39,7 @@ $(function() {
         var html = buildHTML(data);
         $('.messages').append(html); 
         $('.form__submit').prop("disabled",false);
-        $('.messages').animate({scrollTop: $('.lower-message__content')[0].scrollHeight });
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight },'fast');
         $('.form__message').val('');
         $('.hidden').val('');
       })
@@ -62,8 +63,8 @@ $(function() {
             messages.forEach(function(message) {
             var html = buildHTML(message);
               $('.message').append(html);
-              $('.message').animate({scrollTop: $('.lower-message__content')[0].scrollHeight }); 
-              $('.new_message .message').reset('');
+              $('.message').animate({scrollTop: $('.messages')[0].scrollHeight },'fast'); 
+              $('.new_message .message').val('');
           })
         })
         .fail(function() {
