@@ -30,12 +30,7 @@
       line-height:40px;
       margin-top:28px;
       padding:0 20px;
-      &__button{
-        a, a:hover, a:visited{
-        color:#38AEF0;
-        text-decoration:none;
-        }
-      }
+      
     }
   }
   .messages{
@@ -110,4 +105,15 @@
       padding: 0 30px;
     }
   }
+}
+
+.chat a:visited{
+  color: $light_blue;
+
+}
+
+.chat a:link{
+  color: $light_blue;
+  text-decoration: none;
+
 }
